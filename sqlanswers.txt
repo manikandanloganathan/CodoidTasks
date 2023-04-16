@@ -1,0 +1,68 @@
+1)What are Scalar functions and write a query?
+
+CREATE FUNCTION GetFullName (FirstName varchar(50), LastName varchar(50))
+RETURNS varchar(101)
+AS
+BEGIN
+    DECLARE FullName varchar(101)
+    SET FullName = FirstName + ' ' + LastName
+    RETURN FullName
+END
+
+
+2)    inner join
+      left join
+      right join
+       outerjion
+
+
+join is a compareing two tables values 
+
+inner join is a  only return matching values
+
+A LEFT JOIN returns all the rows from the left table and the matching rows from the right table. If there is no match, the right columns will have NULL values.
+
+A RIGHT JOIN returns all the rows from the right table and the matching rows from the left table. If there is no match, the left columns will have NULL values.
+
+A FULL OUTER JOIN returns all the rows from both tables. If there is no match, the corresponding columns will have NULL values.
+
+
+3)   alter tablename
+     modify oldcolumnname to newcolumnname varchar(20);
+
+
+4)select phonenumber,count(*) from customers group by phonenumber having count(*)>1;
+
+
+5) distinct statement is used in get a unique values from  table 
+
+ ex: select distinct studentname from customers;
+
+
+7)select max(salary) from employee where department=" civil";
+
+8)sql operators
+
+comparison operator
+select age from customers where age>28;
+
+logicalopertors
+select age from customers where age>28 and bloodgroup="a+";
+
+string operators
+select first_name from customers where first_name like  'D%';
+
+Arithmetic Operators
+select monthsalary*12 from labours;
+
+9)select * from employee limit 5;
+
+10) select * from employee order by desc limit 5;
+
+11)select salary from employee order by desc limit 3 ofset 1;
+
+12) create table tablename like oldtablename;
+    insert into newtablename select * from oldtablename;
+
+13) select * from employee where department is null;
+
